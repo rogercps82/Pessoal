@@ -1,0 +1,556 @@
+
+
+.container{
+    max-width: 1240px;
+    margin: 0px auto;
+    padding: 0 18px;
+}
+//imagem do fundo home
+
+.bg-home{
+position: relative;
+}
+    
+
+.bg-home:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom , rgba(6, 18, 30, 0) , rgb(6, 18, 30) 65%),url(/img/olho.webp);
+    background-attachment: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+    opacity: 0.9;
+}
+//-----------------FIM DO AJUSTE BG
+
+//INICIO DA CHAMADA
+
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 30px;
+    }
+
+    p{
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .button-contact{
+        padding: 14px 28px;
+        color: $white-normal;
+        background-color: $red-normal;
+        border: 0;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 25px 0;
+    }
+    .button-contact:hover{
+        animation: scaleButton 0.8s alternate infinite;
+    }
+    @keyframes scaleButton{
+        from{
+            transform: scale(1);
+        }
+        to{
+            transform: scale(1.08);
+    }
+    }
+    
+
+}
+//-----------------------------------------
+
+
+@media screen and (max-width: 768px){
+    
+.hero{
+    min-height: 60vh;
+
+    h1{
+        font-size: 25px;
+        padding: 0 14px;
+        width: 100%;
+    }
+    p{
+        font-size: 12px;
+}
+}
+
+
+}
+//------------------------------------------
+
+
+//inicio etilização sobre (about)
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+
+    img{
+       max-width: 480;
+        border-radius: 25%;
+    }
+
+    .icon-item{
+        width: 85px;
+        height: 95px;
+        padding-top: 15px;
+     }
+      
+}
+
+.about-content div{
+    flex: 1;
+    
+}
+
+.about-description{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
+
+    
+    h1{
+        font-size: 35px;
+        margin-bottom: 25px;
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+        text-align: justify;
+    }
+
+    .icon-item{
+        
+        margin-left: 20px;
+       
+    }
+
+    .button-about{
+        padding: 14px 22px;
+        color: $white-normal;
+        background-color: $red-normal;
+        border: 0;
+        font-size: 12px;
+        font-weight: 600;
+        }
+    .button-about:hover{
+            
+            animation: scaleButton 0.8s alternate infinite;
+        }
+    @keyframes scaleButton{
+        from{
+                transform: scale(1);
+            }
+        to{
+                transform: scale(1.08);
+        }
+    }
+            
+}
+
+@media screen and (max-width: 768px){
+    .about-content{
+        flex-direction: column;
+        text-align: justify;
+    }
+
+}
+//--------------------------------------
+
+//---------SERVICES----------------
+
+.services{
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding: 54px 14px;
+    
+}
+.services-content h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+.services-content p{
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+    
+
+}
+
+.servicos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 0 44px 34px 44px;
+}
+
+.estrutura{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-normal;
+    border-radius: 8px;
+    box-shadow: 0 -1px 17px -4px rgba($color: #000000, $alpha: 0.5);
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 280px;
+        transition: transform 0.2s;
+        z-index: 1;
+    }
+}
+.estrutura img:hover{
+    transform: scale(1.1);
+    
+}
+.info{
+    font-size: 13px;
+    text-align: center;
+    z-index: 99;
+    color: $black-dark;
+    padding: 12px 14px;
+}
+
+@media screen and (max-width:768px) {
+    .servicos{
+        flex-direction: column;
+    }
+
+    .info{
+        font-size: 10px;
+    }
+}
+//--------------------------------------
+
+//---FORMULARIO DE CONTATO---
+
+.bg-image{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom , rgba(6, 18, 30, 0) , rgb(6, 18, 30) 50%),url(/img/contato.webp);
+    background-attachment: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+    opacity: 0.9;
+    
+    }
+    
+    .container-cont {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+        position: relative;
+        gap: 35px;
+    }
+    
+    .contact-image {
+        max-width: 300px;
+        max-height: 300px;
+        
+        border-radius: 10px;
+        position: relative;
+        margin-top: 10%;
+    }
+    
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width:600px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.379);
+        padding: 10px 25px;
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        margin-top: 7%;
+        font-family: 'sora',sans-serif;
+        
+        
+    }
+    
+    .contact-form label {
+        margin-bottom: 3px;
+        color: white;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 10px;
+        outline: none;
+        resize: none;
+        
+    }
+    
+    
+    
+    .contact-form button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    .contact-form button:hover {
+        background-color: #45a049;
+        border-radius: 10px;
+    }
+    
+    .tit{
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: #ffffff47;
+        background-position-x: center;
+        
+        font-size: 40px;
+        border-radius: 10px;
+    }
+ //------------------------------------//
+
+ //------------footer------------------//
+ .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px;
+    gap: 24px;
+    color: $white-normal;
+
+    img{
+        height: 100px;
+        width: 120px;
+    }
+ }   
+ .footer-icons{
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    
+ }
+
+.footer-icons a:hover{
+    i{
+        animation: translatey 0.8s infinite alternate;
+        color: $red-light;
+    }
+}
+
+@keyframes translatey{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+
+
+ .btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;   
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+
+    img:hover{
+        transform: scale(1.2);
+    }
+
+}
+
+    .btn-whatsapp .tooltip-text{
+        visibility: hidden;
+        position: absolute;
+        width: 128px;
+        top: 20px;
+        left: -144px;
+        padding: 8px;
+        border-radius: 8px;
+        text-align: center;
+        background-color: transparent;
+        color: $white-normal;
+        opacity: 0;
+        transition: opacity 0.4s;
+
+    }
+
+    .btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+    }
+
+//---------------estilização responsivo footer-------//
+
+@media screen and (max-width:768px) {
+    /*Aqui vai o CSS para versões mobile*/
+    .footer{
+        padding: 15px;
+        gap: 10px;
+        color: $white-normal;
+    
+        img{
+            height: 80px;
+            width: 100px;
+        }
+}
+
+ .foot{
+    font-size: 10px;
+    text-align: center;
+ }
+
+ .footer-icons{
+    display: flex;
+    gap: 15px;
+    font-size: 10px;
+    
+ }
+
+ .contact-form {
+    max-width:400px;
+    margin-top: -100px;
+ }
+
+ .contact-form label {
+    margin-bottom: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #387d3b;
+    border-radius: 10px;
+}
+
+.tit{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff47;
+    background-position-x: center;
+    
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.contact-image {
+    max-width: 200px;
+    max-height: 200px;
+    
+    border-radius: 10px;
+    position: relative;
+    margin-top: -10%;
+}
+
+.btn-whatsapp{
+    img{
+        max-width: 54px;
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    
+    width: 128px;
+    top: 13px;
+    left: -110px;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: transparent;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.4s;
+    font-size: 10px;
+
+}
+
+
+    
+
+
+
+}

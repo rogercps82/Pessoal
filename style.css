@@ -1,0 +1,589 @@
+@charset "UTF-8";
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  
+  
+}
+
+/*paleta cores definidos para importação*/
+header {
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+i {
+  color: #fff;
+}
+
+.header-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.header-icons a:hover i {
+  animation: translatey 0.8s infinite alternate;
+  color: #d34040;
+}
+
+@keyframes translatey {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.header-button {
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  color: #fff;
+  background-color: transparent;
+  transition: background-color 0.8s;
+}
+
+.header-button:hover {
+  border: 1px solid #d34040;
+  background-color: #d34040;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.header-logo img {
+  width: 300px;
+  height: 250px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  html{
+    overflow-x: hidden;
+  }
+
+  .header-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .header-content i {
+    margin-top: 16px;
+    font-size: 24px;
+  }
+  .header-logo img {
+    width: 180px;
+    height: 160px;
+    margin-top: 26px;
+  }
+  .header-button {
+    display: none;
+  }
+}
+.container {
+  max-width: 1240px;
+  margin: 0px auto;
+  padding: 0 18px;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0), rgb(6, 18, 30) 65%), url(/img/WEL.webp);
+  background-attachment: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  opacity: 0.9;
+}
+
+.hero {
+  color: #fff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+.hero h1 {
+  text-align: center;
+  line-height: 150%;
+  max-width: 940px;
+  font-size: 30px;
+}
+.hero p {
+  text-align: center;
+  padding-top: 25px;
+}
+.hero .button-contact {
+  padding: 14px 28px;
+  color: #fff;
+  background-color: #d94140;
+  border: 0;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 25px 0;
+}
+.hero .button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  
+  
+  .hero {
+    min-height: 60vh;
+  }
+  .hero h1 {
+    font-size: 25px;
+    padding: 0 14px;
+    width: 100%;
+  }
+  .hero p {
+    font-size: 12px;
+  }
+  .bg-home:before {
+    background-position: center;
+  }
+}
+.about {
+  background-color: #06121e;
+  overflow: hidden;
+  color: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+}
+.about-content img {
+  max-width: 480;
+  border-radius: 25%;
+}
+.about-content .icon-item {
+  width: 85px;
+  height: 95px;
+  padding-top: 15px;
+}
+
+.about-content div {
+  flex: 1;
+}
+
+.about-description {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25px;
+}
+.about-description h1 {
+  font-size: 35px;
+  margin-bottom: 25px;
+  text-align: center;
+  margin-top: 35px;
+}
+.about-description p {
+  margin-bottom: 14px;
+  line-height: 150%;
+  text-align: justify;
+}
+.about-description .icon-item {
+  margin-left: 20px;
+}
+.about-description .button-about {
+  padding: 14px 22px;
+  color: #fff;
+  background-color: #d94140;
+  border: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.about-description .button-about:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: justify;
+  }
+}
+.services {
+  background-color: #fff;
+  color: #232224;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 14px;
+}
+
+.services-content h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.services-content p {
+  line-height: 150%;
+  margin-bottom: 14px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.servicos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 0 44px 34px 44px;
+}
+
+.estrutura {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 -1px 17px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.estrutura img {
+  width: 100%;
+  height: 280px;
+  transition: transform 0.2s;
+  z-index: 1;
+}
+
+.estrutura img:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  font-size: 13px;
+  text-align: center;
+  z-index: 99;
+  color: #161617;
+  padding: 12px 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .servicos {
+    flex-direction: column;
+  }
+  .info {
+    font-size: 10px;
+  }
+}
+.bg-image {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0), rgb(6, 18, 30) 50%), url(/img/contato.webp);
+  background-attachment: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  opacity: 0.9;
+}
+
+.container-cont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  gap: 35px;
+}
+
+.contact-image {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 10%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.379);
+  padding: 10px 25px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 10px;
+  margin-top: 7%;
+  font-family: "sora", sans-serif;
+}
+
+.contact-form label {
+  margin-bottom: 3px;
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+}
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+  border-radius: 10px;
+}
+
+.tit {
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.2784313725);
+  background-position-x: center;
+  font-size: 40px;
+  border-radius: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px;
+  gap: 24px;
+  color: #fff;
+}
+.footer img {
+  height: 100px;
+  width: 120px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.footer-icons a:hover i {
+  animation: translatey 0.8s infinite alternate;
+  color: #d34040;
+}
+
+@keyframes translatey {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+.btn-whatsapp {
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  z-index: 99;
+}
+.btn-whatsapp img {
+  max-width: 74px;
+  transition: transform 0.4s;
+}
+.btn-whatsapp img:hover {
+  transform: scale(1.2);
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 128px;
+  top: 20px;
+  left: -144px;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  /*Aqui vai o CSS para versões mobile*/
+  .footer {
+    padding: 15px;
+    gap: 10px;
+    color: #fff;
+  }
+  .footer img {
+    height: 80px;
+    width: 100px;
+  }
+  .foot {
+    font-size: 10px;
+    text-align: center;
+  }
+  .footer-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 10px;
+  }
+  .contact-form {
+    max-width: 400px;
+    margin-top: -100px;
+  }
+  .contact-form label {
+    margin-bottom: 4px;
+    color: white;
+    font-size: 12px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+  }
+  .contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+  .contact-form button:hover {
+    background-color: #387d3b;
+    border-radius: 10px;
+  }
+  .tit {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.2784313725);
+    background-position-x: center;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+  .contact-image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    position: relative;
+    margin-top: -10%;
+  }
+  .btn-whatsapp img {
+    max-width: 54px;
+  }
+  .btn-whatsapp .tooltip-text {
+    width: 128px;
+    top: 13px;
+    left: -110px;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.4s;
+    font-size: 10px;
+  }
+}
+body {
+  font-family: "sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #06121e;
+}
+
+/*presets ja definidos para os elementos*/
+button {
+  font-family: "sora", sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
